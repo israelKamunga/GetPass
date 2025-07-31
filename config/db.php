@@ -1,7 +1,7 @@
 <?php
 class Database {
     private $host = "localhost";
-    private $db_name = "ma_base";
+    private $db_name = "kamoagatepass";
     private $username = "root";
     private $password = "";
     public $conn;
