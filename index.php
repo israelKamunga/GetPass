@@ -17,7 +17,7 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
         $message = "Nom d'utilisateur ou mot de passe incorrect.";
     } else {
         $_SESSION["user"] = $userGet["Username"];
-        header("Location: Vue/GatePassForm.php");
+        header("Location: Vue/gatepasses.php");
         exit();
     }
 }
