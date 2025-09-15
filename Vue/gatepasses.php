@@ -22,6 +22,7 @@ $gatepasses = $user->getAllGatePasses();
     <meta charset="UTF-8">
     <title>Liste des GatePass</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="../assets/lib/qrcodejs/qrcode.min.js" defer></script>
     <style>
         body {
             background: #111;
@@ -122,7 +123,7 @@ $gatepasses = $user->getAllGatePasses();
         }
         .qr-box {
             margin-top: 1rem;
-            background: #222;
+            background: white;
             padding: 1rem;
             border-radius: 8px;
         }
@@ -202,7 +203,7 @@ $gatepasses = $user->getAllGatePasses();
             height: 200,
             colorDark : "#000000",
             colorLight : "#ffffff",
-            correctLevel : QRCode.CorrectLevel.H
+            correctLevel : QRCode.CorrectLevel.L
         });
         console.log(<?php echo json_encode($qrData); ?>);
         <?php endforeach; ?>

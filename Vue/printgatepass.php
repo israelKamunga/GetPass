@@ -65,9 +65,9 @@ $footer_img = "../assets/img/footer.jpg"; // Mets le chemin de ton image
         }
 
         .user-name {
-            color: #fff;
-            background: #181818;
+            color: black;
             padding: 0.5rem 1rem;
+            margin-right: 80px;
             border-radius: 4px;
             font-weight: bold;
         }
@@ -81,7 +81,7 @@ $footer_img = "../assets/img/footer.jpg"; // Mets le chemin de ton image
         }
 
         .gatepass-labels {
-            background: #181818;
+            color: black;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             padding: 2rem;
@@ -94,7 +94,7 @@ $footer_img = "../assets/img/footer.jpg"; // Mets le chemin de ton image
         }
 
         .qr-box {
-            background: #222;
+            background: #ffffffff;
             padding: 1rem;
             border-radius: 8px;
             display: flex;
@@ -106,30 +106,29 @@ $footer_img = "../assets/img/footer.jpg"; // Mets le chemin de ton image
 
         .signature-label {
             position: absolute;
-            right: 2rem;
-            bottom: 2rem;
-            background: #181818;
-            color: #fff;
+            right: 5rem;
+            bottom: 1rem;
+            color: black;
+            font-weight: bold;
             padding: 0.7rem 2rem;
             border-radius: 8px;
             font-size: 1.1rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
         .header {
             background-image: url('../assets/img/header.png');
-            background-size: cover;
-            background-position: center;
+            background-size: 85% auto;
+            background-position: top;
             background-repeat: no-repeat;
             width: 100vw;
-            height: 250px;
+            height: 200px;
             background-position: center;
         }
 
         .footer {
             background-image: url('../assets/img/footer.png');
-            background-size: cover;
-            background-position: center;
+            background-size: 85% auto;
+            background-position: top;
             background-repeat: no-repeat;
             width: 100vw;
             height: 250px;
@@ -158,7 +157,7 @@ $footer_img = "../assets/img/footer.jpg"; // Mets le chemin de ton image
     <div class="main-content">
         <div class="user-bar">
             <span
-                class="user-name"><?php echo htmlspecialchars($username['username'] ?? $username['name'] ?? $username); ?></span>
+                class="user-name">User : <?php echo htmlspecialchars($username['username'] ?? $username['name'] ?? $username); ?></span>
         </div>
         <div class="gatepass-details-box">
             <div class="gatepass-labels">
@@ -199,11 +198,11 @@ $footer_img = "../assets/img/footer.jpg"; // Mets le chemin de ton image
             ?>
             new QRCode(document.getElementById('qr-code'), {
                 text: <?php echo json_encode($qrData); ?>,
-                width: 200,
-                height: 200,
+                width: 250,
+                height: 250,
                 colorDark: "#000000",
                 colorLight: "#ffffff",
-                correctLevel: QRCode.CorrectLevel.H
+                correctLevel: QRCode.CorrectLevel.L
             });
         <?php endif; ?>
 

@@ -36,11 +36,15 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
 
 <body>
     <div class="auth-container">
+        <!-- Ajout du logo/brand -->
+        <div style="display: flex; justify-content: center; margin-bottom: 1.5rem;">
+            <img src="assets/img/brand.png" alt="Brand" style="height: 60px;">
+        </div>
         <h2>Connexion</h2>
         <form class="auth-form" action="index.php" method="POST">
             <input type="text" name="username" placeholder="Nom d'utilisateur" required>
             <input type="password" name="password" placeholder="Mot de passe" required>
-            <label for=""><?php $message ?></label>
+            <label for=""><?php echo $message; ?></label>
             <button type="submit">Se connecter</button>
         </form>
     </div>
